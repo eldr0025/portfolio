@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Media By Ryan</title>
+</head>
+<body>
+    <!-- Skip Links -->
+    <nav class="skip-links">
+        <a href="#">Skip to Top</a>
+        <a href="#">Skip to Collections</a>
+        <a href="#">Skip to Footer</a>
+    </nav>
+    
+    <header>
+    
+        <!-- Navigation Menu -->
+        <div class="nav-container"> <!-- Entire navigation section, wrapped everything in a class so I can have more control while applying styles -->
+            <img src="./images/logo.svg" alt="Company logo" itemprop="logo"> <!-- Company logo, used schema itemprop command to identify it as a logo, alt text also gives screenreader more information about the image -->
+
+            <div class="nav-content">
+                <nav role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> <!-- Schema link identifies this nav section as a site nav element -->
+                    <ul class="nav-list" role="list"> <!-- ARIA role identifying this as a list -->
+                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" class="current" itemprop="url" role="link"><span itemprop="name">HOME</span></a></li>
+                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">COMPANY</span></a></li>
+                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">PORTFOLIO</span></a></li>
+                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">SERVICES</span></a></li>
+                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">REVIEWS</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Portfolio Page h1 -->
+        <h1>Portfolio</h1>
+        
+        <!-- Collections Section -->
+
+        <!-- Collections Header -->
+        <h2>COLLECTIONS</h2>
+        
+        <!-- Portfolio Images Display -->
+        <img src="/images/mtl-car-show.png" alt="Montreal Car Show">
+        <p>MTL CAR SHOW</p>
+        <img src="/images/break-the-rules.png" alt="Break The Rules">
+        <p>BREAK THE RULES</p>
+        <img src="/images/composition.png" alt="Composition">
+        <p>COMPOSITION</p>
+        <img src="/images/exposure.png" alt="Exposure">
+        <p>EXPOSURE</p>
+        <img src="/images/movement.png" alt="Movement">
+        <p>MOVEMENT</p>
+        <img src="/images/day-1.png" alt="Day 1">
+        <p>DAY 1</p>
+        <img src="/images/day-2.png" alt="Day 2">
+        <p>DAY 2</p>
+        <img src="/images/day-3.png" alt="Day 3">
+        <p>DAY 3</p>
+        <img src="/images/day-4.png" alt="Day 4">
+        <p>DAY 4</p>
+        <img src="/images/day-5.png" alt="Day 5">
+        <p>DAY 5</p>
+        <img src="/images/day-6.png" alt="Day 6">
+        <p>DAY 6</p>
+        <img src="/images/day-7.png" alt="Day 7">
+        <p>DAY 7</p>
+        <img src="/images/day-8.png" alt="Day 8">
+        <p>DAY 8</p>
+        <img src="/images/day-9.png" alt="Day 9">
+        <p>DAY 9</p>
+        <img src="/images/day-10.png" alt="Day 10">
+        <p>DAY 10</p>
+    </main>
+
+    <footer>
+        <!-- Copyright Line -->
+        <p class="copyright-line" itemscope itemtype="https://schema.org/CreativeWork">&copy; 2025 Media By Ryan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
