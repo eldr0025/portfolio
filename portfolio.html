@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <title>Media By Ryan</title>
 </head>
 <body>
     <!-- Skip Links -->
-    <nav class="skip-links">
-        <a href="#">Skip to Top</a>
-        <a href="#">Skip to Collections</a>
-        <a href="#">Skip to Footer</a>
+    <nav class="visually-hidden-focusable skip-links position-absolute z-3 p-2 bg-white">
+        <a href="#top">Skip to Top</a>
+        <a href="#collections">Skip to Collections</a>
+        <a href="#footer">Skip to Footer</a>
     </nav>
     
     <header>
-    
+        
         <!-- Navigation Menu -->
-        <div class="nav-container"> <!-- Entire navigation section, wrapped everything in a class so I can have more control while applying styles -->
-            <img src="./images/logo.svg" alt="Company logo" itemprop="logo"> <!-- Company logo, used schema itemprop command to identify it as a logo, alt text also gives screenreader more information about the image -->
+        <div class="navbar navbar-expand-lg navbar-bg-custom border-bottom py-3"> <!-- Entire navigation section, wrapped everything in a class so I can have more control while applying styles -->
+            <div class="container">
+                <!-- Logo -->
+                <div class="navbar-brand fw-bold text-uppercase" id="top">
+                    <img src="./images/logo.svg" alt="Company logo" itemprop="logo" height="30" class="me-2"> <!-- Company logo, used schema itemprop command to identify it as a logo, alt text also gives screenreader more information about the image -->
+                </div>
 
-            <div class="nav-content">
-                <nav role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> <!-- Schema link identifies this nav section as a site nav element -->
-                    <ul class="nav-list" role="list"> <!-- ARIA role identifying this as a list -->
-                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" class="current" itemprop="url" role="link"><span itemprop="name">HOME</span></a></li>
-                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="/index.html" itemprop="url" role="link"><span itemprop="name">COMPANY</span></a></li>
-                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">PORTFOLIO</span></a></li>
-                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">SERVICES</span></a></li>
-                        <li itemprop="hasPart" itemscope itemtype="https://schema.org/WebPageElement"><a href="#" itemprop="url" role="link"><span itemprop="name">REVIEWS</span></a></li>
-                    </ul>
-                </nav>
+                <div class="nav-content">
+                    <nav role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> <!-- Schema link identifies this nav section as a site nav element -->
+                        <ul class="navbar-nav gap-3" role="list"> <!-- ARIA role identifying this as a list -->
+                            <div class="nav-item">
+                                <a class="nav-link fw-semibold text-uppercase" href="/index.html" itemprop="url" role="link">HOME</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link fw-semibold text-uppercase" href="/company.html" itemprop="url" role="link">COMPANY</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link fw-semibold text-uppercase active border-bottom border-3 border-white" href="#" itemprop="url" role="link">PORTFOLIO</a>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
 
@@ -37,47 +47,114 @@
 
     <main>
         <!-- Portfolio Page h1 -->
-        <h1>Portfolio</h1>
+        <div class="bg-custom-green text-white text-center py-4">
+            <h1 class="display-1 spacing-custom">PORTFOLIO</h1>
+        </div>
         
         <!-- Collections Section -->
 
         <!-- Collections Header -->
-        <h2>COLLECTIONS</h2>
+        <h2 id="collections" class="text-green letter-spacing-custom py-4 ms-5">COLLECTIONS</h2>
         
         <!-- Portfolio Images Display -->
-        <img src="/images/mtl-car-show.png" alt="Montreal Car Show">
-        <p>MTL CAR SHOW</p>
-        <img src="/images/break-the-rules.png" alt="Break The Rules">
-        <p>BREAK THE RULES</p>
-        <img src="/images/composition.png" alt="Composition">
-        <p>COMPOSITION</p>
-        <img src="/images/exposure.png" alt="Exposure">
-        <p>EXPOSURE</p>
-        <img src="/images/movement.png" alt="Movement">
-        <p>MOVEMENT</p>
-        <img src="/images/day-1.png" alt="Day 1">
-        <p>DAY 1</p>
-        <img src="/images/day-2.png" alt="Day 2">
-        <p>DAY 2</p>
-        <img src="/images/day-3.png" alt="Day 3">
-        <p>DAY 3</p>
-        <img src="/images/day-4.png" alt="Day 4">
-        <p>DAY 4</p>
-        <img src="/images/day-5.png" alt="Day 5">
-        <p>DAY 5</p>
-        <img src="/images/day-6.png" alt="Day 6">
-        <p>DAY 6</p>
-        <img src="/images/day-7.png" alt="Day 7">
-        <p>DAY 7</p>
-        <img src="/images/day-8.png" alt="Day 8">
-        <p>DAY 8</p>
-        <img src="/images/day-9.png" alt="Day 9">
-        <p>DAY 9</p>
-        <img src="/images/day-10.png" alt="Day 10">
-        <p>DAY 10</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/mtl-car-show.png" alt="Montreal Car Show">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MTL CAR SHOW</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/break-the-rules.png" alt="Break The Rules">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">BREAK THE RULES</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/composition.png" alt="Composition">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">COMPOSITION</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/exposure.png" alt="Exposure">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">EXPOSURE</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/movement.png" alt="Movement">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MOVEMENT</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-1.png" alt="Day 1">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 1</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-2.png" alt="Day 2">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 2</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-3.png" alt="Day 3">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 3</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-4.png" alt="Day 4">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 4</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-5.png" alt="Day 5">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 5</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-6.png" alt="Day 6">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 6</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-7.png" alt="Day 7">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 7</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-8.png" alt="Day 8">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 8</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-9.png" alt="Day 9">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 9</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-wrapper">
+                        <img src="/images/day-10.png" alt="Day 10">
+                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer id="footer">
         <!-- Copyright Line -->
         <p class="copyright-line" itemscope itemtype="https://schema.org/CreativeWork">&copy; 2025 Media By Ryan. All rights reserved.</p>
     </footer>
