@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/hover.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Media By Ryan</title>
 </head>
-<body>
+<body class="body-bg" itemscope itemtype="https://schema.org/WebPage" role="document">
     <!-- Skip Links -->
-    <nav class="visually-hidden-focusable skip-links position-absolute z-3 p-2 bg-white">
-        <a href="#top">Skip to Top</a>
-        <a href="#collections">Skip to Collections</a>
-        <a href="#footer">Skip to Footer</a>
+    <nav class="visually-hidden-focusable skip-links position-absolute z-3 p-2 bg-white" itemscope itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+        <a href="#top" class="position-absolute start-0 top-0 skip-link-custom-color text-white px-3 py-2 border-0 fw-semibold visually-hidden-focusable" itemprop="url" role="link">Skip to Top</a>
+        <a href="#collections" class="position-absolute start-0 top-0 skip-link-custom-color text-white px-3 py-2 border-0 fw-semibold visually-hidden-focusable" itemprop="url" role="link">Skip to Collections</a>
+        <a href="#footer" class="position-absolute start-0 top-0 skip-link-custom-color text-white px-3 py-2 border-0 fw-semibold visually-hidden-focusable" itemprop="url" role="link">Skip to Footer</a>
     </nav>
     
-    <header>
+    <header itemscope itemtype="https://schema.org/WPHeader" role="banner">
         
         <!-- Navigation Menu -->
-        <div class="navbar navbar-expand-lg navbar-bg-custom border-bottom py-3"> <!-- Entire navigation section, wrapped everything in a class so I can have more control while applying styles -->
+        <div class="navbar navbar-expand-lg navbar-bg-custom border-bottom py-3" role="presentation"> <!-- Entire navigation section, wrapped everything in a class so I can have more control while applying styles -->
             <div class="container">
                 <!-- Logo -->
-                <div class="navbar-brand fw-bold text-uppercase" id="top">
+                <div class="navbar-brand fw-bold text-uppercase" id="top" role="img" aria-label="Company logo">
                     <img src="./images/logo.svg" alt="Company logo" itemprop="logo" height="30" class="me-2"> <!-- Company logo, used schema itemprop command to identify it as a logo, alt text also gives screenreader more information about the image -->
                 </div>
 
                 <div class="nav-content">
                     <nav role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement"> <!-- Schema link identifies this nav section as a site nav element -->
                         <ul class="navbar-nav gap-3" role="list"> <!-- ARIA role identifying this as a list -->
-                            <div class="nav-item">
-                                <a class="nav-link fw-semibold text-uppercase" href="/index.html" itemprop="url" role="link">HOME</a>
+                            <div class="nav-item" role="listitem">
+                                <a class="nav-link hvr-grow navbar-spacing-custom bebas-neue-regular fs-5" href="/index.html" itemprop="url" role="link">HOME</a>
                             </div>
-                            <div class="nav-item">
-                                <a class="nav-link fw-semibold text-uppercase" href="/company.html" itemprop="url" role="link">COMPANY</a>
+                            <div class="nav-item" role="listitem">
+                                <a class="nav-link hvr-grow navbar-spacing-custom bebas-neue-regular fs-5" href="/company.html" itemprop="url" role="link">COMPANY</a>
                             </div>
-                            <div class="nav-item">
-                                <a class="nav-link fw-semibold text-uppercase active border-bottom border-3 border-white" href="#" itemprop="url" role="link">PORTFOLIO</a>
+                            <div class="nav-item" role="listitem">
+                                <a class="nav-link hvr-grow navbar-spacing-custom bebas-neue-regular fs-5 active border-bottom border-3 border-white" href="#" itemprop="url" role="link">PORTFOLIO</a>
                             </div>
                         </ul>
                     </nav>
@@ -45,118 +50,122 @@
 
     </header>
 
-    <main>
+    <main itemscope itemtype="https://schema.org/WebPageElement" role="main">
         <!-- Portfolio Page h1 -->
-        <div class="bg-custom-green text-white text-center py-4">
-            <h1 class="display-1 spacing-custom">PORTFOLIO</h1>
+        <div class="bg-custom-green text-white text-center py-4" role="region" aria-labelledby="portfolio-title">
+            <h1 id="portfolio-title" class="display-1 spacing-custom bebas-neue-regular" itemprop="headline">PORTFOLIO</h1>
         </div>
         
         <!-- Collections Section -->
 
         <!-- Collections Header -->
-        <h2 id="collections" class="text-green letter-spacing-custom py-4 ms-5">COLLECTIONS</h2>
+        <div id="collections" class="container" role="region" aria-labelledby="collections-title">
+            <h2 id="collections-title" class="company-header-custom-color bebas-neue-regular letter-spacing-custom py-4" itemprop="headline">COLLECTIONS</h2>
+        </div>
         
         <!-- Portfolio Images Display -->
-        <div class="container">
+        <div class="container" itemscope itemtype="https://schema.org/ImageGallery" role="group" aria-label="Portfolio Image Gallery">
             <div class="row row-cols-1 row-cols-md-3 g-4">
             
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-1">
                     <div class="img-wrapper">
-                        <img src="/images/mtl-car-show.png" alt="Montreal Car Show">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MTL CAR SHOW</p>
+                        <img src="/images/mtl-car-show.png" alt="Montreal Car Show" itemprop="contentUrl">
+                        <p id="img-title-1" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MTL CAR SHOW</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-2">
                     <div class="img-wrapper">
-                        <img src="/images/break-the-rules.png" alt="Break The Rules">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">BREAK THE RULES</p>
+                        <img src="/images/break-the-rules.png" alt="Break The Rules" itemprop="contentUrl">
+                        <p id="img-title-2" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">BREAK THE RULES</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-3">
                     <div class="img-wrapper">
-                        <img src="/images/composition.png" alt="Composition">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">COMPOSITION</p>
+                        <img src="/images/composition.png" alt="Composition" itemprop="contentUrl">
+                        <p id="img-title-3" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">COMPOSITION</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-4">
                     <div class="img-wrapper">
-                        <img src="/images/exposure.png" alt="Exposure">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">EXPOSURE</p>
+                        <img src="/images/exposure.png" alt="Exposure" itemprop="contentUrl">
+                        <p id="img-title-4" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">EXPOSURE</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-5">
                     <div class="img-wrapper">
-                        <img src="/images/movement.png" alt="Movement">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MOVEMENT</p>
+                        <img src="/images/movement.png" alt="Movement" itemprop="contentUrl">
+                        <p id="img-title-5" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">MOVEMENT</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-6">
                     <div class="img-wrapper">
-                        <img src="/images/day-1.png" alt="Day 1">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 1</p>
+                        <img src="/images/day-1.png" alt="Day 1" itemprop="contentUrl">
+                        <p id="img-title-6" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 1</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-7">
                     <div class="img-wrapper">
-                        <img src="/images/day-2.png" alt="Day 2">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 2</p>
+                        <img src="/images/day-2.png" alt="Day 2" itemprop="contentUrl">
+                        <p id="img-title-7" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 2</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-8">
                     <div class="img-wrapper">
-                        <img src="/images/day-3.png" alt="Day 3">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 3</p>
+                        <img src="/images/day-3.png" alt="Day 3" itemprop="contentUrl">
+                        <p id="img-title-8" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 3</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-9">
                     <div class="img-wrapper">
-                        <img src="/images/day-4.png" alt="Day 4">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 4</p>
+                        <img src="/images/day-4.png" alt="Day 4" itemprop="contentUrl">
+                        <p id="img-title-9" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 4</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-10">
                     <div class="img-wrapper">
-                        <img src="/images/day-5.png" alt="Day 5">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 5</p>
+                        <img src="/images/day-5.png" alt="Day 5" itemprop="contentUrl">
+                        <p id="img-title-10" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 5</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-11">
                     <div class="img-wrapper">
-                        <img src="/images/day-6.png" alt="Day 6">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 6</p>
+                        <img src="/images/day-6.png" alt="Day 6" itemprop="contentUrl">
+                        <p id="img-title-11" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 6</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-12">
                     <div class="img-wrapper">
-                        <img src="/images/day-7.png" alt="Day 7">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 7</p>
+                        <img src="/images/day-7.png" alt="Day 7" itemprop="contentUrl">
+                        <p id="img-title-12" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 7</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-13">
                     <div class="img-wrapper">
-                        <img src="/images/day-8.png" alt="Day 8">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 8</p>
+                        <img src="/images/day-8.png" alt="Day 8" itemprop="contentUrl">
+                        <p id="img-title-13" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 8</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-14">
                     <div class="img-wrapper">
-                        <img src="/images/day-9.png" alt="Day 9">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 9</p>
+                        <img src="/images/day-9.png" alt="Day 9" itemprop="contentUrl">
+                        <p id="img-title-14" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 9</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" role="figure" aria-labelledby="img-title-15">
                     <div class="img-wrapper">
-                        <img src="/images/day-10.png" alt="Day 10">
-                        <p class="position-absolute bottom-0 start-0 textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 10</p>
+                        <img src="/images/day-10.png" alt="Day 10" itemprop="contentUrl">
+                        <p id="img-title-15" class="position-absolute bottom-0 start-0 collection-inter textbox-custom-color text-white px-3 py-2 m-2 text-uppercase letter-spacing-custom">DAY 10</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer id="footer">
+    <footer id="footer" class="bg-custom-green" itemscope itemtype="https://schema.org/Organization" role="contentinfo" aria-label="Footer">
         <!-- Copyright Line -->
-        <p class="copyright-line" itemscope itemtype="https://schema.org/CreativeWork">&copy; 2025 Media By Ryan. All rights reserved.</p>
+        <p class="text-white px-3 py-2 m-2" itemscope itemtype="https://schema.org/CreativeWork" role="note" aria-label="Copyright Notice">&copy; 2025 Media By Ryan. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

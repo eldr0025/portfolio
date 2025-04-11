@@ -1,3 +1,59 @@
+body {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.skip-link-custom-color {
+    background-color: #4C5C52;
+}
+
+.homepage-text-custom-color {
+    color: #2B2B2B;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-sub-header {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.inter-send-btn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.collection-inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
 .navbar-bg-custom {
     background-color: #E2E5E9;
 }
@@ -6,8 +62,16 @@
     letter-spacing: 0.5em;
 }
 
+.navbar-spacing-custom {
+    letter-spacing: 0.1em
+}
+
+.button-bg-custom {
+    background-color: white;
+}
+
 .bg-custom-green {
-    background-color: #B0BEB5 !important;
+    background-color: #4C5C52 !important;
 }
 
 .letter-spacing-custom {
@@ -24,7 +88,7 @@
     overflow: hidden;
 }
   
-  .img-wrapper img {
+.img-wrapper img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -35,7 +99,7 @@
     bottom: 0;
     left: 0;
     margin: 0.5rem;
-    background-color: #6c757d; /* Same as bg-secondary */
+    background-color: #6c757d; 
     color: white;
     padding: 0.5rem 1rem;
     letter-spacing: 0.1em;
@@ -43,16 +107,67 @@
 }
 
 .textbox-custom-color {
-    background-color: #7C7878;
+    background-color: #716F6F;
 }
 
 .cta-text-custom-color {
     color: #4C5C52;
 }
 
-.custom-position {
-    position: absolute;
-    top: 75%;         /* Position the content at 75% from the top of the parent */
-    left: 50%;        /* Horizontally center the content */
-    transform: translate(-50%, -325%);  /* Adjust vertical positioning by moving it 75% of its height */
+.company-header-custom-color {
+    color: #46534A;
+}
+
+.send-btn-custom-bg {
+    background-color: #4C5C52;
+}
+
+.send-button-spacing {
+    letter-spacing: 0.1em;
+}
+
+.body-bg {
+    background-color: #E2E5E9;
+}
+
+.message-bg-white {
+    background-color: white;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+@media (max-width: 991.98px) {
+    .nav-content {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .about-text-wrapper {
+        position: static !important;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-text-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 10rem;
+      width: 100%;
+    }
+  
+    .position-relative {
+      position: relative;
+    }
+
+    .about-text-wrapper p {
+        background-color:#E2E5E9;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
 }
