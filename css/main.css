@@ -1,7 +1,9 @@
+/* Applying custom bebas font family to body text */
 body {
     font-family: "Bebas Neue", sans-serif;
 }
 
+/* Custom Colors overriding bootstrap in CSS */
 .skip-link-custom-color {
     background-color: #4C5C52;
 }
@@ -10,6 +12,48 @@ body {
     color: #2B2B2B;
 }
 
+.navbar-bg-custom {
+    background-color: #E2E5E9;
+}
+
+.button-bg-custom {
+    background-color: white;
+}
+
+.bg-custom-green {
+    background-color: #4C5C52 !important;
+}
+
+.text-green {
+    color: #72827C;
+}
+
+.textbox-custom-color {
+    background-color: #716F6F;
+}
+
+.cta-text-custom-color {
+    color: #4C5C52;
+}
+
+.company-header-custom-color {
+    color: #46534A;
+}
+
+.send-btn-custom-bg {
+    background-color: #4C5C52;
+}
+
+.body-bg {
+    background-color: #E2E5E9;
+}
+
+.message-bg-white {
+    background-color: white;
+}
+
+
+/* Grow animation used from public hover.css library */
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;
@@ -27,37 +71,35 @@ body {
     transform: scale(1.1);
 }
 
+/* Styling the fonts */
+
+/* Header font */
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
+/* Subheader & text font */
 .inter-sub-header {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
 }
 
 .inter-send-btn {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
 
 .collection-inter {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
 
-.navbar-bg-custom {
-    background-color: #E2E5E9;
-}
-
+/* Custom letter spacing */
 .spacing-custom {
     letter-spacing: 0.5em;
 }
@@ -66,22 +108,15 @@ body {
     letter-spacing: 0.1em
 }
 
-.button-bg-custom {
-    background-color: white;
-}
-
-.bg-custom-green {
-    background-color: #4C5C52 !important;
-}
-
 .letter-spacing-custom {
     letter-spacing: 0.2em;
 }
 
-.text-green {
-    color: #72827C;
+.send-button-spacing {
+    letter-spacing: 0.1em;
 }
 
+/* General styling and bootstrap overriding */
 .img-wrapper {
     position: relative;
     height: 300px;
@@ -106,39 +141,13 @@ body {
     text-transform: uppercase;
 }
 
-.textbox-custom-color {
-    background-color: #716F6F;
-}
-
-.cta-text-custom-color {
-    color: #4C5C52;
-}
-
-.company-header-custom-color {
-    color: #46534A;
-}
-
-.send-btn-custom-bg {
-    background-color: #4C5C52;
-}
-
-.send-button-spacing {
-    letter-spacing: 0.1em;
-}
-
-.body-bg {
-    background-color: #E2E5E9;
-}
-
-.message-bg-white {
-    background-color: white;
-}
-
 .centered-text {
     text-align: center;
 }
 
+/* Styling for smaller screens */
 @media (max-width: 991.98px) {
+    /* Changing position of navbar for smaller screens */
     .nav-content {
         width: 100%;
         margin-top: 1rem;
@@ -151,6 +160,7 @@ body {
     }
 }
 
+/* Styling for larger screens */
 @media (min-width: 992px) {
     .about-text-wrapper {
       position: absolute;
