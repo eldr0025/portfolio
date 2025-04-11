@@ -7,7 +7,6 @@ There were definitely a few...
 So I ...
 ## What have you learned by creating your web portfolio?
 I learned that...
-
 ## Assets used
 ### Frameworks & Libraries
 - [Hover.css - Used for grow animation](https://ianlunn.github.io/Hover/)
@@ -22,3 +21,5 @@ I learned that...
 - [WebAIM Contrast Checker - Used to check text contrast](https://webaim.org/resources/contrastchecker/)
 ### Images
 All images photographed by myself (Ryan Eldred-Neville/Media By Ryan)
+### My website design in Figma
+- [Media By Ryan Prototype](https://www.figma.com/design/GzfcKxw5ydM0f8ZZkDDT6B/eldred_ryan_prototype?node-id=35-2&p=f&t=3giMYxF7H96C7rLp-0)
